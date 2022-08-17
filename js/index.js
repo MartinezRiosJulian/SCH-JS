@@ -22,6 +22,7 @@ let arrayStickers = [
   { id: 2, nombre: "Sticker3", talle: "N/NA", precio: 80 },
   { id: 3, nombre: "Sticker4", talle: "N/NA", precio: 200 },
 ];
+let listaArrays = arrayRemeras.concat(arrayGorras, arrayTazas, arrayStickers);
 
 function saludar() {
   alert("Bienvenid@ a SCH Mecanica Integral");
@@ -29,17 +30,12 @@ function saludar() {
 
 saludar();
 
-function selecProd() {
-  alert("Seleccione su producto");
-}
-
-selecProd();
-
-
 let producto = "";
 
-while (producto != "Aceptar") {
-  producto = prompt("Taza|Remera|Gorra|Sticker|Aceptar");
+while (producto != "Salir") {
+  producto = prompt(
+    "Seleccione su producto \n Taza|Remera|Gorra|Sticker|Ver|Salir"
+  );
   switch (producto) {
     case "Taza":
       comprarTaza();
@@ -53,20 +49,21 @@ while (producto != "Aceptar") {
     case "Sticker":
       comprarSticker();
       break;
-    case "Aceptar":
+    case "Ver":
+      verProductos();
+      break;
+    case "Salir":
       break;
     default:
       alert("Carrito vacio");
       break;
   }
-  alert("Procesando su compra");
-  let carga = 3;
-  while (carga >= 0) {
-    carga--;
-    alert(carga);
-  }
-  
-  alert("Compra Finalizada");
+}
+alert("Compra Finalizada");
+let carga = 3;
+while (carga > 0) {
+  carga--;
+  alert(carga);
 }
 
 function comprarTaza() {
@@ -121,15 +118,22 @@ function comprarSticker() {
   }
 }
 
-//let producto = prompt("Llene su carrito");
-/*if (producto.toLowerCase() == 'taza') {
-  alert('Agregado a carrito "Taza SCH"');
-} else if (producto.toLowerCase() == 'gorra') {
-  alert('Agregado a carrito "Gorra SCH"');
-} else if (producto.toLowerCase() == 'remera') {
-  alert('Agregado a carrito "Remera SCH"');
-} else if (producto.toLowerCase() == 'sticker') {
-  alert('Agregado a carrito "Sticker SCH"');
-} else {
-  alert('Carrito vacio');
-}*/
+function verProductos() {
+  listaArrays.forEach((producto) => {
+    console.log(
+      `ID: ${producto.id} Nombre: ${producto.nombre} Talle: ${producto.talle} Precio: ${producto.precio}`
+    );
+  });
+}
+
+let submitButton = document.getElementById("submit-btn");
+submitButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  mostrarValoresForm();
+});
+function mostrarValoresForm() {
+  const onlyInputs = document.querySelectorAll("#carrito-compra-form select");
+  onlyInputs.forEach((input) => {
+    console.log(input.value);
+  });
+}
