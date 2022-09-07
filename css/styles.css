@@ -532,19 +532,19 @@
   html #compraFinal {
     font-family: "Bebas Neue", cursive;
     color: #ffff;
-    display: flex;
-    justify-content: center;
-    grid-column: 1/3;
+    display:flex;
+    justify-content:center;
+    grid-column: 2/3;
     grid-row: 3/4;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
-  html #objFinal {
+  html #objFinal, #objFinalT, #objFinalP {
     font-family: "Bebas Neue", cursive;
     color: #ffff;
     display: flex;
-    justify-content: center;
-    grid-column: 3/5;
+    justify-content:center;
+    grid-column: 3/4;
     grid-row: 3/4;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
