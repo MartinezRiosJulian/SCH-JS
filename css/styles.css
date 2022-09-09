@@ -536,7 +536,7 @@
     justify-content:center;
     grid-column: 2/3;
     grid-row: 3/4;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   html #objFinal, #objFinalT, #objFinalP {
     font-family: "Bebas Neue", cursive;
@@ -545,6 +545,6 @@
     justify-content:center;
     grid-column: 3/4;
     grid-row: 3/4;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }

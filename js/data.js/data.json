@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Remeras",
+    "talle": "XS, S, M, L, XL, XXL",
+    "precio": "A partir de 500"
+  },
+  {
+    "id": 2,
+    "nombre": "Gorras",
+    "talle": "XS, S, M, L, XL, XXL",
+    "precio": "A partir de 500"
+  },
+  {
+    "id": 3,
+    "nombre": "Tazas",
+    "talle": "N/NA",
+    "precio": "A partir de 150"
+  },
+  {
+    "id": 4,
+    "nombre": "Stickers",
+    "talle": "N/NA",
+    "precio": "A partir de 150"
+  }
+]

@@ -1,26 +1,12 @@
-import { listaTalles, listaPrecios, listaProductos } from "./arrays.js";
+import { listaTalles, listaPrecios, listaProductos } from "./data.js/arrays.js";
+import {$selectProducto, $selectTalle, $selectPrecio, $submitBtn, $tablaSubmit } from "../js/data.js/const.js";
+import {clickBtn ,mostrarLocalStorage, mostrarValoresForm} from "../js/data.js/funtions.js";
+import {datosTabla} from "../js/data.js/funtions.js";
 
-const $selectProducto = document.getElementById("selecProd");
-const $selectTalle = document.getElementById("selecTalle");
-const $selectPrecio = document.getElementById("selecPrecio");
-const $submitBtn = document.getElementById("submitBtn");
-let objObtenido = localStorage.getItem("Compra");
-let msj = "Compra Finalizada";
-
-const clickBtn = (event) => {
-  event.preventDefault();
-  document.getElementById("compraFinal").innerText = msj;
-  Swal.fire({
-    title: 'Listo!',
-    text: 'Compra Finalizada',
-    icon: 'success',
-    confirmButtonText: 'Cerrar'
-  })
-};
-
+$tablaSubmit.addEventListener("click", datosTabla);
 $submitBtn.addEventListener("click", clickBtn);
-$submitBtn.addEventListener("click", mostrarLocalStorage);
-$submitBtn.addEventListener("click", mostrarValoresForm);
+// $submitBtn.addEventListener("click", mostrarValoresForm);
+// $submitBtn.addEventListener("click", mostrarLocalStorage);
 
 function mostrarSelectProd(arreglo, lugar) {
   let option =
@@ -139,38 +125,13 @@ $selectTalle.addEventListener("change", function () {
       cortar(listaPrecios, 4, 6, $selectPrecio);
       break;
     case "XL":
-      cortar(listaPrecios, 6, 8, $selectPrecio);
+      cortar(listaPrecios, 6, 7, $selectPrecio);
       break;
     case "XXl":
-      cortar(listaPrecios, 6, 8, $selectPrecio);
+      cortar(listaPrecios, 6, 7, $selectPrecio);
       break;
     case "N/NA":
       cortar(listaPrecios, 7, 8, $selectPrecio);
       break;
   }
 });
-
-function mostrarLocalStorage() {
-  let objObtenido = localStorage.getItem("Compra")
-  if (objObtenido) {
-    console.log(JSON.parse(objObtenido));
-  } else {
-    console.log("No hay productos guardados");
-  }
-}
-
-function mostrarValoresForm() {
-  function Compra(producto, talle, precio) {
-    this.producto = producto;
-    this.talle = talle;
-    this.precio = precio;
-  }
-  const productoElegido = document.getElementById("selecProd").value;
-  const talleElegido = document.getElementById("selecTalle").value;
-  const precioElegido = document.getElementById("selecPrecio").value;
-  const nuevaCompra = new Compra(productoElegido, talleElegido, precioElegido);
-  const compraLocal = localStorage.setItem("Compra", JSON.stringify(nuevaCompra));
-  document.getElementById("objFinal").innerHTML += `<p>${nuevaCompra.producto}</p>-
-                                                    <p>${nuevaCompra.talle}</p>-
-                                                    <p>${nuevaCompra.precio}</p>`;
-}

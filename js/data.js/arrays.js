@@ -54,28 +54,28 @@ export let precios = [
 export let listaArrays = productos.concat(talles, precios);
 
 export let arraysdeRemeras = [
-  { id: 0, nombre: "Remera /algodon", precio: 100 },
-  { id: 1, nombre: "Remera /poliester", precio: 20 },
-  { id: 2, nombre: "Remera /bordada", precio: 80 },
-  { id: 3, nombre: "Remera /mangaLarga", precio: 200 },
+  { id: 0, nombre: "Remera algodon", precio: "A partir de 500" },
+  { id: 1, nombre: "Remera poliester", precio: "A partir de 500" },
+  { id: 2, nombre: "Remera bordada", precio: "A partir de 500" },
+  { id: 3, nombre: "Remera mangaLarga", precio: "A partir de 500" },
 ];
 export let arraysdeGorras = [
-  { id: 0, nombre: "Gorra /blanco", precio: 150 },
-  { id: 2, nombre: "Gorra /negro", precio: 90 },
-  { id: 1, nombre: "Gorra /naranja", precio: 20 },
-  { id: 3, nombre: "Gorra /azul", precio: 210 },
+  { id: 0, nombre: "Gorra blanco", precio: "A partir de 500" },
+  { id: 2, nombre: "Gorra negro", precio: "A partir de 500" },
+  { id: 1, nombre: "Gorra naranja", precio: "A partir de 500" },
+  { id: 3, nombre: "Gorra azul", precio: "A partir de 500" },
 ];
 export let arraysdeTazas = [
-  { id: 0, nombre: "Taza /blanco", precio: 120 },
-  { id: 1, nombre: "Taza /negro", precio: 30 },
-  { id: 2, nombre: "Taza /naranja ", precio: 40 },
-  { id: 3, nombre: "Taza /azul", precio: 70 },
+  { id: 0, nombre: "Taza blanco", precio: "A partir de 150" },
+  { id: 1, nombre: "Taza negro", precio: "A partir de 150" },
+  { id: 2, nombre: "Taza naranja ", precio: "A partir de 150" },
+  { id: 3, nombre: "Taza azul", precio: "A partir de 150" },
 ];
 export let arraysdeStickers = [
-  { id: 0, nombre: "Sticker auto", precio: 130 },
-  { id: 1, nombre: "Sticker termo", precio: 60 },
-  { id: 3, nombre: "Sticker/parche", precio: 45 },
-  { id: 2, nombre: "Sticker mochila", precio: 35 },
+  { id: 0, nombre: "Sticker auto", precio: "A partir de 150" },
+  { id: 1, nombre: "Sticker termo", precio: "A partir de 150" },
+  { id: 3, nombre: "Sticker parche", precio: "A partir de 150" },
+  { id: 2, nombre: "Sticker mochila", precio: "A partir de 150" },
 ];
 export let listaArrays2 = arraysdeRemeras.concat(
   arraysdeGorras,
