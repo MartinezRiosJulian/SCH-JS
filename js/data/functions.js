@@ -12,6 +12,7 @@ export function clickBtn(event) {
         confirmButtonText: 'Cerrar'
     })
 };
+
 export function mostrarLocalStorage() {
     let objObtenido = localStorage.getItem("Compra")
     if (objObtenido) {
@@ -26,6 +27,7 @@ export function mostrarValoresForm() {
     const talleElegido = $selectTalle.value;
     const precioElegido = $selectPrecio.value;
     const nuevaCompra = new Compra(productoElegido, talleElegido, precioElegido);
+    const objResult = localStorage.setItem("Compra", JSON.stringify(nuevaCompra));
     document.getElementById("objFinal").innerHTML += `<p>${nuevaCompra.producto}</p>-<p>${nuevaCompra.talle}</p>-<p>${nuevaCompra.precio}</p>`;
 };
 
