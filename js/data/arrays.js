@@ -1,4 +1,4 @@
-export let listaProductos = [
+export const listaProductos = [
   "Remera Algodon",
   "Remera Poliester",
   "Remera Manga Larga",
@@ -16,11 +16,11 @@ export let listaProductos = [
   "Sticker Mochila",
   "Sticker Parche"
 ]
-export let listaTalles = ["XS", "S", "M", "L", "XL", "XXL", "N/NA"]
+export const listaTalles = ["XS", "S", "M", "L", "XL", "XXL", "N/NA"]
 
-export let listaPrecios = [500, 550, 600, 650, 700, 750, 800, 150]
+export const listaPrecios = [500, 550, 600, 650, 700, 750, 800, 150]
 
-export let productos = [
+export const productos = [
   { id: 0, nombre: "Remera", tipo: "Algodon" },
   { id: 1, nombre: "Remera", tipo: "Poliester" },
   { id: 2, nombre: "Remera", tipo: "Manga Larga" },
@@ -38,73 +38,73 @@ export let productos = [
   { id: 14, nombre: "Sticker", para: "Mochila" },
   { id: 15, nombre: "Sticker", para: "Parche" },
 ];
-export let talles = [
+export const talles = [
   { id: 0, talle: "S" },
   { id: 1, talle: "M" },
   { id: 2, talle: "L" },
   { id: 3, talle: "XL" },
 ];
-export let precios = [
+export const precios = [
   { id: 0, precio: "100" },
   { id: 1, precio: "150" },
   { id: 2, precio: "50" },
   { id: 3, precio: "250" },
 ];
 
-export let listaArrays = productos.concat(talles, precios);
+export const listaArrays = productos.concat(talles, precios);
 
-export let arraysdeRemeras = [
+export const arraysdeRemeras = [
   { id: 0, nombre: "Remera algodon", precio: "A partir de 500" },
   { id: 1, nombre: "Remera poliester", precio: "A partir de 500" },
   { id: 2, nombre: "Remera bordada", precio: "A partir de 500" },
   { id: 3, nombre: "Remera mangaLarga", precio: "A partir de 500" },
 ];
-export let arraysdeGorras = [
+export const arraysdeGorras = [
   { id: 0, nombre: "Gorra blanco", precio: "A partir de 500" },
   { id: 2, nombre: "Gorra negro", precio: "A partir de 500" },
   { id: 1, nombre: "Gorra naranja", precio: "A partir de 500" },
   { id: 3, nombre: "Gorra azul", precio: "A partir de 500" },
 ];
-export let arraysdeTazas = [
+export const arraysdeTazas = [
   { id: 0, nombre: "Taza blanco", precio: "A partir de 150" },
   { id: 1, nombre: "Taza negro", precio: "A partir de 150" },
   { id: 2, nombre: "Taza naranja ", precio: "A partir de 150" },
   { id: 3, nombre: "Taza azul", precio: "A partir de 150" },
 ];
-export let arraysdeStickers = [
+export const arraysdeStickers = [
   { id: 0, nombre: "Sticker auto", precio: "A partir de 150" },
   { id: 1, nombre: "Sticker termo", precio: "A partir de 150" },
   { id: 3, nombre: "Sticker parche", precio: "A partir de 150" },
   { id: 2, nombre: "Sticker mochila", precio: "A partir de 150" },
 ];
-export let listaArrays2 = arraysdeRemeras.concat(
+export const listaArrays2 = arraysdeRemeras.concat(
   arraysdeGorras,
   arraysdeTazas,
   arraysdeStickers
 );
 
-export let listaRemeras = [
+export const listaRemeras = [
   { id: 0, nombre: "Remera", tipo: "Algodon" },
   { id: 1, nombre: "Remera", tipo: "Poliester" },
   { id: 2, nombre: "Remera", tipo: "Manga Larga" },
   { id: 3, nombre: "Remera", tipo: "Bordada" },
 ]
-export let listaGorras = [
+export const listaGorras = [
   { id: 0, nombre: "Gorra", color: "azul" },
   { id: 1, nombre: "Gorra", color: "naranja" },
   { id: 2, nombre: "Gorra", color: "negra" },
   { id: 3, nombre: "Gorra", color: "blanca" },
 ]
-export let listaTazas = [
+export const listaTazas = [
   { id: 0, nombre: "Taza", color: "blanca" },
   { id: 1, nombre: "Taza", color: "negra" },
   { id: 2, nombre: "Taza", color: "naranja" },
   { id: 3, nombre: "Taza", color: "azul" },
 ]
-export let listaStickers = [
+export const listaStickers = [
   { id: 0, nombre: "Sticker", para: "auto" },
   { id: 1, nombre: "Sticker", para: "termo" },
   { id: 2, nombre: "Sticker", para: "mochila" },
   { id: 3, nombre: "Sticker", para: "parche" },
 ]
-export let productosTotales = listaRemeras.concat(listaGorras, listaTazas, listaStickers);
+export const productosTotales = listaRemeras.concat(listaGorras, listaTazas, listaStickers);
